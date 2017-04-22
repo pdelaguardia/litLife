@@ -4,7 +4,7 @@
   "description": "litLife proto",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node appSrc/index.js --presets es2015,stage-2"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/pdelaguardia/litLife/issues"
   },
-  "homepage": "https://github.com/pdelaguardia/litLife#readme"
+  "homepage": "https://github.com/pdelaguardia/litLife#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
 }
