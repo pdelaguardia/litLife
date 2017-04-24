@@ -4,9 +4,8 @@
   "description": "litLife proto",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon appSrc/index.js --exec babel-node",
-    "build": "babel appSrc -d dist webpack",
-    "serve": "node dist",
+    "start": "webpack -p",
+    "build": "webpack",
     "share": "lt --port 8000"
   },
   "repository": {
@@ -26,5 +25,8 @@
     "localtunnel": "^1.8.2",
     "nodemon": "^1.11.0",
     "path": "^0.12.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
