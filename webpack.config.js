@@ -1,10 +1,35 @@
 const path = require('path');
 
+
 module.exports = {
-    entry: './dist/index.js',
+    devtool: 'inline-source-map',
+    context: path.resolve(__dirname, './appSrc'),
+    entry: {
+        app: './srcServer.js'
+    },
     target: "node",
     output: {
+        path: path.resolve(__dirname, './src'),
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        publicPath: '/'        
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, './src')
+    },
+    plugins: [],
+    module: {
+        rules: [
+            {test: /\.css$/, use: ['style-loader', 'css-loader']},
+            {
+                test: /\.js$/, 
+                exclude: [/node_modules/],
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["es2015"]
+                    }
+                }],
+            },
+        ]
     }
 };

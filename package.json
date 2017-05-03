@@ -2,30 +2,35 @@
   "name": "litlife",
   "version": "0.0.0",
   "description": "litLife proto",
-  "main": "app.js",
+  "main": "srcServer",
   "scripts": {
-    "start": "nodemon appSrc/index.js --exec babel-node",
+    "start": "nodemon appSrc/srcServer.js --exec babel-node",
     "prod": "webpack -p",
-    "build": "npm-run-all babel:prod prod",
-    "serve": "node dist",
-    "babel:prod": "babel appSrc -d dist"
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pdelaguardia/litLife.git"
   },
-  "author": "LitLife org",
-  "license": "MIT",
+  "author": "LitLife",
   "bugs": {
     "url": "https://github.com/pdelaguardia/litLife/issues"
   },
   "homepage": "https://github.com/pdelaguardia/litLife#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.1",
     "nodemon": "^1.11.0",
-    "path": "^0.12.7"
+    "numeral": "^2.0.6",
+    "path": "^0.12.7",
+    "webpack": "^2.4.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "express": "^4.15.2",
