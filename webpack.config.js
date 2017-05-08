@@ -7,7 +7,7 @@ module.exports = {
     entry: {
         app: './index.js'
     },
-    target: "node",
+    target: "web",
     output: {
         path: path.resolve(__dirname, './src'),
         filename: 'bundle.js',
