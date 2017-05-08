@@ -4,7 +4,8 @@
   "description": "litLife proto",
   "main": "srcServer",
   "scripts": {
-    "start": "nodemon appSrc/srcServer.js --exec babel-node",
+    "start": "npm-run-all dev watch",
+    "watch": "nodemon appSrc/* src/*",
     "prod": "webpack -p",
     "dev": "webpack-dev-server"
   },

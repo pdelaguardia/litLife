@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
     devtool: 'inline-source-map',
-    context: path.resolve(__dirname, './appSrc'),
+    context: path.resolve(__dirname, './src'),
     entry: {
-        app: './srcServer.js'
+        app: './index.js'
     },
     target: "node",
     output: {
