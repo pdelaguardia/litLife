@@ -9,7 +9,7 @@ const compiler = webpack(config);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
-    console.log("Hello");
+    console.log("HELLO!");
 })
 
 app.listen(3000, () => console.log("Example app running on port 3000"));

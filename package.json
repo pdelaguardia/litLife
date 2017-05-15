@@ -4,9 +4,10 @@
   "description": "litLife proto",
   "main": "src",
   "scripts": {
-    "start": "npm-run-all --parallel lint:watch open:src",
-    "start:nodemon": "npm-run-all open:src watch",
-    "watch": "babel-watch appSrc/srcServer.js",
+    "prestart": "npm run lint",
+    "start:lint": "npm-run-all --parallel lint:watch open:src",
+    "start": "npm run watch",
+    "watch": "babel-watch appSrc/srcServer.js -w src -w appSrc",
     "open:src": "babel-node appSrc/srcServer.js",
     "prod": "webpack -p",
     "lint": "esw webpack.config.js src/*.js appSrc/*.js",
